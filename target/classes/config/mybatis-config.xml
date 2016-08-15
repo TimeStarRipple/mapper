@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<properties resource="config/jdbc.properties" />
+	
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC">
+      		</transactionManager>
+      		<dataSource type="POOLED">
+		        <property name="driver" value="${driver}"/>
+		        <property name="url" value="${url}"/>
+		        <property name="username" value="${username}"/>
+		        <property name="password" value="${password}"/>
+		    </dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<!-- 这里的路径有三种配置方式，第一个是相对路径，相对于resources，如下；第二个是绝对路径
+		，可以使用网络文件；最后一个是包路径引用，引用包内所有文件 -->
+  	</mappers>
+</configuration>
